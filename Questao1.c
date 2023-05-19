@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 
-void exibirDiagP(int mat[][50], int tamanho, int indice) {
+void metodo1(int mat[][50], int tamanho, int indice) {
     if (indice == tamanho) {
         return;
     }
     printf("%d\n", mat[indice][indice]);
-    exibirDiagP(mat, tamanho, indice + 1);
+    metodo1(mat, tamanho, indice + 1);
 }
 
 int main() {
@@ -30,7 +30,7 @@ int main() {
     }
 
     printf("Diagonal principal: \n");
-    exibirDiagP(mat, tamanho, 0);
+    metodo1(mat, tamanho, 0);
 
     return 0;
 }
